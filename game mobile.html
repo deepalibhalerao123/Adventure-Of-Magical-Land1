@@ -427,19 +427,18 @@ div.first {
   
   &lt;img src=&quot;images/hat.gif&quot; class=&quot;center&quot;&gt;
   
-  (track: &#39;audio2&#39;,&#39;play&#39;)(set: $typewriterText to &quot;The school is beginning after the summer break. Now, you have to get ready for your return to the magical lands of Hogwarts. But, before you reach the school, a visit to Diagon alley is cardinal. Make sure you purchase all the essential things from Diagon alley in order to prepare yourself for the upcoming academic year of school.&quot;) 
-  (set: $typewriterPos to 1)|typewriterOutput&gt;[](live: 15ms)[(append: ?typewriterOutput)[(print: $typewriterText&#39;s $typewriterPos)](set: $typewriterPos to it + 1)(if: $typewriterPos is $typewriterText&#39;s length + 1)[(stop:)]]}(live: 10s)[(stop:)&lt;br&gt;[[Visit Diagon Alley]]]
+  (track: &#39;audio2&#39;,&#39;play&#39;)(set: $typewriterText to &quot;The school is beginning after the summer break. Now, you have to get ready for your return to the magical lands of Hogwarts. But, before you reach the school, a visit to Diagon alley is cardinal. Make sure you purchase all the essential things from Diagon alley in order to prepare yourself for the upcoming academic year of school.&quot;) (set: $typewriterPos to 1)|typewriterOutput&gt;[](live: 15ms)[(append: ?typewriterOutput)[(print: $typewriterText&#39;s $typewriterPos)](set: $typewriterPos to it + 1)(if: $typewriterPos is $typewriterText&#39;s length + 1)[(stop:)]]}(live: 10s)[(stop:)&lt;br&gt;[[Visit Diagon Alley]]]
 &lt;/div&gt;
   &lt;div class=&quot;col-sm-2&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
-
+}
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
 ]
-</tw-passagedata><tw-passagedata pid="9" name="Visit Diagon Alley" tags="entry" position="601,947" size="100,100">&lt;style&gt;
+}</tw-passagedata><tw-passagedata pid="9" name="Visit Diagon Alley" tags="entry" position="601,947" size="100,100">&lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Creepster&amp;family=Nosifer&amp;display=swap&#39;);
 	
 	.start{
