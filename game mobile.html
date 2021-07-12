@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play game mobile.</tw-noscript></noscript></tw-story>
-<tw-storydata name="game mobile" startnode="1" creator="Twine" creator-version="2.3.14" ifid="FB52DD61-4182-44B4-9292-A10B4631EEDC" zoom="0.25" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="game mobile" startnode="1" creator="Twine" creator-version="2.3.14" ifid="FB52DD61-4182-44B4-9292-A10B4631EEDC" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 tw-story {
      padding: 2% 10%; 
@@ -141,6 +141,13 @@ tw-story[tags~="stairs"] {
   background-position: center;
 }
 
+tw-story[tags~="exam"] {
+ background-image:url('images/exam.gif');
+  background-size:cover;
+  height: 100vh;
+  background-position: center;
+}
+
 tw-sidebar {
   position: fixed;
   top: 0;
@@ -254,8 +261,7 @@ div.first {
 &lt;div class=&quot;row&quot;&gt;
 (set:$name to(prompt:&quot;ENTER YOU NAME:&quot;, &quot;&quot;))
 (set:$age to(prompt:&quot;ENTER YOU AGE:&quot;, &quot;&quot;))
-(set: $g to &quot;m&quot;)
-(set:$g to(prompt:&quot;ENTER Gender (m or f):&quot;, &quot;&quot;))
+
 
   &lt;div class=&quot;col-sm-3&quot;&gt;
   &lt;/div&gt;
@@ -277,7 +283,7 @@ div.first {
 	
 ]
 }
-</tw-passagedata><tw-passagedata pid="5" name="hal.tracks" tags="" position="1774,151" size="100,100">bgsound: ./sound/background.mp3
+</tw-passagedata><tw-passagedata pid="5" name="hal.tracks" tags="" position="1772.3333333333333,151" size="100,100">bgsound: ./sound/background.mp3
 audio1: ./sound/audio1.mp3
 audio2: ./sound/audio2.mp3
 audio2.1: ./sound/audio2.1.mp3
@@ -528,7 +534,7 @@ div.first {
 &lt;div class=&quot;row&quot;&gt;(set: $shop to 0)
   &lt;div class=&quot;col-sm-1&quot;&gt;&lt;/div&gt;
   &lt;div class=&quot;col-sm-10 first&quot;&gt;
-  [Enter into books shop](track: &#39;audio3&#39;,&#39;play&#39;)
+  [Enter into books shop]
   [[&lt;img src=&quot;images/books.jpg&quot; class=&quot;book&quot;&gt;-&gt;Book Shop]]
   &lt;/div&gt;
   &lt;div class=&quot;col-sm-1&quot;&gt;
@@ -958,7 +964,7 @@ background-color: rgba(15, 0, 0, 0.6);
 
 (set: $E to $E+5)
 
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;br&gt;
@@ -1044,7 +1050,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (set: $E to $E+1)
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -1235,7 +1241,7 @@ position: absolute;
 (set: $E to $E-1)
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -1322,7 +1328,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;
 {
 &lt;div class=&quot;top&quot;&gt;
-	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 (set: $E to $E-5)
@@ -1486,7 +1492,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;{
 
 &lt;div class=&quot;top&quot;&gt;
-	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 (set: $E to $E+4)
@@ -1668,7 +1674,7 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;&lt;br&gt;
 
 (set: $E to $E-5)
@@ -1749,7 +1755,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;
 {
 &lt;div class=&quot;top&quot;&gt;
-	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 	(set: $medals to ($medals+1))(set: $xp to ($xp+150))					(alert:&quot;Congratulations New MEDAL earned &lt;br&gt; (EMPATHETIC)&quot;)
 
@@ -1837,7 +1843,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;
 {
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -2020,7 +2026,7 @@ background-color: rgba(15, 0, 0, 0.6);
 {
 &lt;div class=&quot;top&quot;&gt;
 
-|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 
 &lt;/div&gt;
 
@@ -2107,7 +2113,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;
 {
 	&lt;div class=&quot;top&quot;&gt;
-	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies=$throphy    || Medals=$medals &lt;/b&gt;|
+	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies=$trophy    || Medals=$medals &lt;/b&gt;|
 	&lt;/div&gt;
 
 
@@ -2806,7 +2812,7 @@ Medals : $medals &lt;/b&gt;&lt;br&gt;
 [N = $N]&lt;br&gt;
 
 
-&lt;br&gt;(live: 1s)+(text-colour:yellow)[(stop:)[[Next-&gt;chapter2]]]
+&lt;br&gt;[(stop:)[[Next-&gt;chapter2]]]
 
 &lt;/div&gt;
   &lt;div class=&quot;col-sm-2&quot;&gt;
@@ -2989,7 +2995,7 @@ var img = new Image();
 img.src = &quot;images/c1.png&quot;;
 &lt;/script&gt;
 
-</tw-passagedata><tw-passagedata pid="44" name="chapter2" tags="info" position="2155.6666666666665,373" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+</tw-passagedata><tw-passagedata pid="44" name="chapter2" tags="info" position="2154,376.3333333333333" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 @import url(&#39;https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&amp;display=swap&#39;);
@@ -3081,7 +3087,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;{
 
 &lt;div class=&quot;top&quot;&gt;
-	|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+	|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 (set: $E to $E+4)
@@ -7520,7 +7526,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="102" name="C2.END" tags="info" position="2268,3822" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="102" name="C2.END" tags="info" position="2268,3823.666666666667" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 @import url(&#39;https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&amp;display=swap&#39;);
@@ -7562,14 +7568,14 @@ Medals : $medals &lt;/b&gt;&lt;br&gt;
 [N = $N]&lt;br&gt;
 
 
-&lt;br&gt;(live: 1s)[(stop:)[[Next-&gt;chapter2]]]
+&lt;br&gt;(live: 1s)[(stop:)[[Next-&gt;chapter3]]]
 
 &lt;/div&gt;
   &lt;div class=&quot;col-sm-2&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 }
-</tw-passagedata><tw-passagedata pid="103" name="chapter3" tags="dark" position="3489,498" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+</tw-passagedata><tw-passagedata pid="103" name="chapter3" tags="dark" position="3010.3333333333335,118" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 @import url(&#39;https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&amp;display=swap&#39;);
@@ -7585,62 +7591,69 @@ div.first {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 60%;
+
 }
 .title{
 	font-family: &#39;Fontdiner Swanky&#39;, cursive;
 }
 &lt;/style&gt;{
 &lt;div class=&quot;row&quot;&gt;
-  &lt;div class=&quot;col-sm-3&quot;&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;col-sm-6 first&quot;&gt;
+  &lt;div class=&quot;col-sm-8 first&quot;&gt;
   
   &lt;div class=&quot;title&quot;&gt;&lt;br&gt;[Aftermath and Redemption]&lt;/div&gt;
   
-(if: $g is &quot;m&quot;)[&lt;img src=&quot;images/char1.1.png&quot; class=&quot;center&quot;&gt;]
-(else-if: $g is &quot;f&quot;)[&lt;img src=&quot;images/f1.1.png&quot; class=&quot;center&quot;&gt;]
-(else:)[&lt;img src=&quot;images/char1.1.png&quot; class=&quot;center&quot;&gt;]
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;center&quot;&gt;
+
 
 
 (track: &#39;c3intro&#39;,&#39;play&#39;)
 
-(set: $typewriterText to &quot;Attacked by the evil forces has harmed many of the students and teachers. The magic ring to rule the world was stolen by these dark-magicians, and now they have disappeared into the abyss. No one knows what they will do next, and how to stop them. But, our headmaster will not stay put. Headmaster has arranged a meet to address what has happened, and his speech hints for an act of redemption.&quot;)(display: &quot;Typewriter&quot;)
+(set: $typewriterText to &quot;After the attack of Evil forces the Magic Ring to rule the world was stolen by these Dark-magicians.School is safe as security is increased. The academics will resume from tomorrow and the very first day is a challenge in itself with three new courses and a introductory vocabulary quiz. Make sure you get yourself prepared properly for the big day.&quot;)(display: &quot;Typewriter&quot;)
 
 &lt;br&gt;(live: 7s)[(stop:)[[Next-&gt;Chapter3.1]]]
 
 &lt;/div&gt;
-  &lt;div class=&quot;col-sm-3&quot;&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 }
-</tw-passagedata><tw-passagedata pid="104" name="Chapter3.1" tags="dorm" position="3804,701" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+</tw-passagedata><tw-passagedata pid="104" name="Chapter3.1" tags="dorm" position="3007.333333333333,358.6666666666666" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
+  height: auto;
   border-radius: 25px;
 }
 div.top{
   background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
+  height: auto;
   border-radius: 10px;
 }
 div.top:hover{
   background-color: black;
-  height: 40px;
+  height: auto;
   border-radius: 10px;
 }
 div.char{
-	height:400px;
+	height:170px;
 	position:relative;
 }
 .mychar{
 position: absolute;
     padding: 0;
     bottom: 0;
+    right: 0;
+}
+
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
     left: 0;
 }
+
 .bottom{
 background-color: rgba(15, 0, 0, 0.6);
   height: auto;
@@ -7654,15 +7667,18 @@ background-color: rgba(15, 0, 0, 0.6);
 	text-align:center;
 }
 &lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+
+(track: &#39;c3intro&#39;,&#39;stop&#39;)
+
+
+&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 &lt;br&gt;
 
 &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
 
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/f1.1.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+
 
 
 	&lt;/div&gt;
@@ -7675,7 +7691,7 @@ background-color: rgba(15, 0, 0, 0.6);
 	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.2]]]
+	(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;C3.2]]]
 	&lt;/div&gt;
 	
 
@@ -7690,115 +7706,54 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="105" name="C3.2" tags="dorm" position="3949,851" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="105" name="C3.2" tags="dorm" position="3012.3333333333335,581" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
+  height: auto;
   border-radius: 25px;
+
+  
 }
 div.top{
   background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
   height: auto;
   border-radius: 10px;
-  padding:0 10px 0 5px;
   text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/f1.1.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	  (set: $typewriterText to &quot;Yeah, Ron. Good morning. &quot;)(display: &quot;Typewriter&quot;)
-   
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3Q1]]]
-	&lt;/div&gt;
-	
-
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
  
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="106" name="C3Q1" tags="dorm" position="3949,1003" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-@import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 120px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-  text-align:center;
-   font-family: &#39;Bubblegum Sans&#39;, cursive;
 }
 div.top:hover{
   background-color: black;
-  height: 40px;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
   border-radius: 10px;
 }
 div.char{
-	height:400px;
+	height:170px;
 	position:relative;
 }
 .mychar{
 position: absolute;
     padding: 0;
     bottom: 0;
-    left: 0;
+    right: 0;
 }
-tw-hook[name=&quot;image&quot;] {
+.harry{
 	position: absolute;
     padding: 0;
     bottom: 0;
@@ -7806,125 +7761,48 @@ tw-hook[name=&quot;image&quot;] {
 }
 .bottom{
 background-color: rgba(15, 0, 0, 0.6);
-  height: 120px;
+  height:auto;
   border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
    font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
 }
-.commontxt{
+.txtbottom{
 	text-align:center;
 }
-.fig{
-	margin:0;
-}
-
 &lt;/style&gt;
 {
-
-&lt;div class=&quot;top&quot;&gt;
-(text-colour:#ffc37a)[[Bit stressed after what happened yesterday.-&gt;C3Q1.1]]
-&lt;/div&gt;
-&lt;br&gt;
-&lt;div class=&quot;top&quot;&gt;
-(text-colour:#ffc37a)[[I am okay, I guess.-&gt;C3Q1.2]]
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[Bit stressed.  -&gt;c3Q1.1]]
 &lt;/div&gt;&lt;br&gt;
 
-&lt;div class=&quot;row&quot;&gt;
-
-&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/f1.1.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-
-&lt;/div&gt;
-
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-   (set: $typewriterText to &quot;How are you feeling, since yesterday? &quot;)(display: &quot;Typewriter&quot;)
-   
- &lt;/div&gt;
-&lt;/div&gt;
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="107" name="C3Q1.1" tags="dorm" position="3796,1193" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[I am okay, I guess. -&gt;c3Q1.2]]
 &lt;/div&gt;
 &lt;br&gt;
 
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
 
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/f1.1.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
 	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
 	&lt;/div&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
-
 	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	[Bit stressed after what happened yesterday.]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.3]]]
-	&lt;/div&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
- (set: $typewriterText to &quot;Okay. I am still in shock. Can’t stop thinking about it.&quot;)(display: &quot;Typewriter&quot;)
+   	(set: $typewriterText to &quot;I couldn’t stop thinking abt Yesterday’s incident.How are you feeling?&quot;)(display: &quot;Typewriter&quot;)
  &lt;/div&gt;
 &lt;/div&gt;
 
@@ -7932,460 +7810,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="108" name="C3Q1.2" tags="dorm" position="4198,1198" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/f1.1.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	[I am okay, I guess.]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.3]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
- (set: $typewriterText to &quot;Okay. I am still in shock. Can’t stop thinking about it.&quot;)(display: &quot;Typewriter&quot;)
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="109" name="C3.3" tags="dorm" position="3948,1633" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/f1.1.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/char1.1.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	(set: $typewriterText to &quot;It is okay Ron. Now, let’s go to the gathering. The headmaster is going to speak.&quot;)(display: &quot;Typewriter&quot;)
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.s2]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="110" name="C3.s2" tags="hall" position="3948,1783" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-|image&gt;[&lt;img src=&quot;images/head.png&quot;&gt;]
-
-
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;
-	
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-(track: &#39;c3head1&#39;,&#39;play&#39;)
-
-	&lt;div class=&quot;col-sm-12 bottom&quot;&gt;
-	(set: $typewriterText to &quot;Good morning, everybody. Yesterday, we all witnessed a terrible and evil act. We were attacked and threatened by dark magicians. As you all might have heard, the precious and most powerful ring ever forged in the history of the world was hidden and secure in our castle for centuries.&quot;)(display: &quot;Typewriter&quot;)
-	
-	&lt;br&gt;
-	(live: 10s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.s2.1]]]
-	&lt;/div&gt;
-	
-
-
-	
-	
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="111" name="C3.s2.1" tags="hall" position="3948,1933" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-|image&gt;[&lt;img src=&quot;images/head.png&quot;&gt;]
-
-
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;
-	
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-(track: &#39;c3head2&#39;,&#39;play&#39;)
-
-	&lt;div class=&quot;col-sm-12 bottom&quot;&gt;
-	(set: $typewriterText to &quot;But, these darkmags have risen strongly and have stolen this ring. It is time that we all should rise again to protect our world from these evil forces. We must stop them from causing any further destruction to anyone. Our school will be restored to its original position in days.&quot;)(display: &quot;Typewriter&quot;)
-	
-	&lt;br&gt;
-	(live: 10s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.s2.2]]]
-	&lt;/div&gt;
-	
-
-
-	
-	
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="112" name="C3.s2.2" tags="hall" position="3948,2083" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-|image&gt;[&lt;img src=&quot;images/head.png&quot;&gt;]
-
-
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;
-	
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-(track: &#39;c3head3&#39;,&#39;play&#39;)
-
-
-	&lt;div class=&quot;col-sm-12 bottom&quot;&gt;
-	(set: $typewriterText to &quot;We have increased the security of the castle, and we are immune to attack, at least for now. From tomorrow onwards your academic term will start. Now, I would like to ask Mrs. Schumer to guide students about upcoming academic activities.&quot;)(display: &quot;Typewriter&quot;)
-	
-	&lt;br&gt;
-	(live: 10s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.s2.3]]]
-	&lt;/div&gt;
-	
-
-
-	
-	
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="113" name="C3.s2.3" tags="hall" position="3948,2233" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-|image&gt;[&lt;img src=&quot;images/mam.png&quot;&gt;]
-
-
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;
-	
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-
-
-	&lt;div class=&quot;col-sm-12 bottom&quot;&gt;
-	(set: $typewriterText to &quot;Thank you, headmaster. Students, as you heard, from tomorrow onwards your academic term will begin. For each year&#39;s students, the schedule will be provided to you by your respective guides. Also, due to recent events, students are should not go out of the castle alone after 6 PM. All students should strictly follow the rules, or there will be consequences.&quot;)(display: &quot;Typewriter&quot;)
-	
-	&lt;br&gt;
-	(live: 10s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.s3.1]]]
-	&lt;/div&gt;
-	
-
-
-	
-	
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="114" name="evil" tags="evil" position="2098,2575" size="100,100">&lt;style&gt;
+]</tw-passagedata><tw-passagedata pid="106" name="evil" tags="evil" position="2098,2575" size="100,100">&lt;style&gt;
 
 
 @import url(&#39;https://fonts.googleapis.com/css2?family=Creepster&amp;family=Nosifer&amp;display=swap&#39;);
@@ -8406,7 +7831,7 @@ background-color: rgba(15, 0, 0, 0.6);
 	(track: &#39;evil&#39;,&#39;play&#39;)
 	(track: &#39;evil&#39;, &#39;volume&#39;, 1)
 	
-]</tw-passagedata><tw-passagedata pid="115" name="hogwarts" tags="hogwart" position="2912.666666666667,569" size="100,100">&lt;style&gt;
+]</tw-passagedata><tw-passagedata pid="107" name="hogwarts" tags="hogwart" position="2287.666666666667,117.3333333333333" size="100,100">&lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Creepster&amp;family=Nosifer&amp;display=swap&#39;);
 	
 	.start{
@@ -8418,7 +7843,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;{
 (track: &#39;welcome&#39;,&#39;play&#39;)
 &lt;h1 class=&quot;start&quot;&gt;(text-colour:yellow)&lt;/h1&gt; 
-}</tw-passagedata><tw-passagedata pid="116" name="run" tags="run" position="2092,3071" size="100,100">&lt;style&gt;
+}</tw-passagedata><tw-passagedata pid="108" name="run" tags="run" position="2092,3071" size="100,100">&lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Creepster&amp;family=Nosifer&amp;display=swap&#39;);
 	
 	.start{
@@ -8430,7 +7855,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;{
 
 &lt;h1 class=&quot;start&quot;&gt;(text-colour:yellow)[[Run-&gt;C2Q6.4]]&lt;/h1&gt; 
-}</tw-passagedata><tw-passagedata pid="117" name="run1" tags="stairs" position="5064,6457" size="100,100">&lt;style&gt;
+}</tw-passagedata><tw-passagedata pid="109" name="run1" tags="stairs" position="5064,6457" size="100,100">&lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Creepster&amp;family=Nosifer&amp;display=swap&#39;);
 	
 	.start{
@@ -8442,551 +7867,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;{
 
 &lt;h1 class=&quot;start&quot;&gt;(text-colour:yellow)[[Run-&gt;C2Q6.7]]&lt;/h1&gt; 
-}</tw-passagedata><tw-passagedata pid="118" name="C3.s3.1" tags="hall" position="3951,2403" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/ch2.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/eve.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.s3.2]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-   (set: $typewriterText to &quot;Whatever the headmaster said sounded good, but I am still worried about what has happened and can happen.&quot;)(display: &quot;Typewriter&quot;)
-   
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="119" name="C3.s3.2" tags="hall" position="3948,2569" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/ch2.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/eve.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-		(set: $typewriterText to &quot;Yeah, I also don’t feel safe.&quot;)(display: &quot;Typewriter&quot;)
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.s3.Q1]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-   [Whatever the headmaster said sounded good, but I am still worried about what has happened and can happen.]
-   
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="120" name="C3.s3.Q1" tags="hall" position="3953,2724" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-@import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 120px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-  text-align:center;
-   font-family: &#39;Bubblegum Sans&#39;, cursive;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-tw-hook[name=&quot;image&quot;] {
-	position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: 120px;
-  border-radius: 10px;
-   font-family: &#39;Bubblegum Sans&#39;, cursive;
-}
-.commontxt{
-	text-align:center;
-}
-.fig{
-	margin:0;
-}
-
-&lt;/style&gt;
-{
-
-&lt;div class=&quot;top&quot;&gt;
-(text-colour:#ffc37a)[[ Actually, I am not worried. I trust our headmaster and teachers.-&gt;C3.Q1.1]]
-&lt;/div&gt;
-&lt;br&gt;
-&lt;div class=&quot;top&quot;&gt;
-(text-colour:#ffc37a)[[ Yeah, these darkmags broke in the castle last time without “The Ring.” God knows what they can do with it now.-&gt;C3.Q1.2]]
-&lt;/div&gt;&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/ch2.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-
-&lt;/div&gt;
-
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/eve.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-   [Oh Ron, no I don’t feel comfortable around people at all. Even talking to you both sometimes makes me annoying. What about you?]
-   
- &lt;/div&gt;
-&lt;/div&gt;
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="121" name="C3.Q1.1" tags="hall" position="3739,2874" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/ch2.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/eve.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	(set: $typewriterText to &quot;Ron : I guess you are right, player. Our headmaster is one of the greatest magicians of all time. We are safe under his watch.&quot;)(display: &quot;Typewriter&quot;)
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.Q1.2.1]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-
-   
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="122" name="C3.Q1.2" tags="hall" position="4271,2857" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/ch2.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/eve.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	(set: $typewriterText to &quot;Ron : You are right and now I feel more scared.&quot;)(display: &quot;Typewriter&quot;)
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.Q1.2.2]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-
-   
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="123" name="C3.Q1.2.1" tags="hall" position="3729,3024" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/ch2.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/eve.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	[Ron : I guess you are right, Our headmaster is one of the greatest magicians of all time. We are safe under his watch.]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.se]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-	(set: $typewriterText to &quot;Yeah, that is true. Let’s hope positively. Now, get to your rooms, clean, and set up everything. Will meet you afterward.&quot;)(display: &quot;Typewriter&quot;)
-
-   
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="124" name="C3.Q1.2.2" tags="hall" position="4271,3009" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
-&lt;style&gt;
-div.first {
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 500px;
-  border-radius: 25px;
-}
-div.top{
-  background-color: rgba(15, 0, 0, 0.6);
-  height: 40px;
-  border-radius: 10px;
-}
-div.top:hover{
-  background-color: black;
-  height: 40px;
-  border-radius: 10px;
-}
-div.char{
-	height:400px;
-	position:relative;
-}
-.mychar{
-position: absolute;
-    padding: 0;
-    bottom: 0;
-    left: 0;
-}
-.bottom{
-background-color: rgba(15, 0, 0, 0.6);
-  height: auto;
-  border-radius: 10px;
-  padding:0 10px 0 5px;
-  text-align:center;
-  font-family: &#39;Bubblegum Sans&#39;, cursive;
-   font-size:30px;
-}
-.txtbottom{
-	text-align:center;
-}
-&lt;/style&gt;{
-&lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
-&lt;/div&gt;
-&lt;br&gt;
-
-&lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
-
-(if: $g is &quot;m&quot;)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-(else-if:$g is &quot;f&quot;)|image&gt;[&lt;img src=&quot;images/ch2.png&quot;&gt;]
-(else:)|image&gt;[&lt;img src=&quot;images/chm2.png&quot;&gt;]
-
-	&lt;/div&gt;
-	&lt;div class=&quot;col-sm-6 char&quot;&gt;&lt;img src=&quot;images/eve.png&quot; class=&quot;mychar&quot;&gt;
-	&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;row&quot;&gt;
-
-	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	[Ron : You are right and now I feel more scared.]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
-	(live: 2s)[(stop:)(text-colour:yellow)[[Continue-&gt;C3.se]]]
-	&lt;/div&gt;
-	
-	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-	(set: $typewriterText to &quot;Don’t forget guys that our headmaster is one of the greatest magicians of all time. I think we will be safe under his watch. Now, get to your rooms, clean, and set up everything. I will meet you afterward.&quot;)(display: &quot;Typewriter&quot;)
-
-   
- &lt;/div&gt;
-&lt;/div&gt;
-
-}
-(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
-    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
-	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="125" name="C3.se" tags="" position="4032,3134" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="126" name="Q6" tags="shop1" position="439,3183" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+}</tw-passagedata><tw-passagedata pid="110" name="Q6" tags="shop1" position="439,3183" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9086,7 +7967,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="127" name="q6.1" tags="shop1" position="264,3325" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="111" name="q6.1" tags="shop1" position="264,3325" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9136,7 +8017,7 @@ background-color: rgba(15, 0, 0, 0.6);
 {
 &lt;div class=&quot;top&quot;&gt;
 
-|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 
 &lt;/div&gt;
 
@@ -9171,7 +8052,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="128" name="q6.2" tags="shop1" position="584,3363" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="112" name="q6.2" tags="shop1" position="584,3363" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9221,7 +8102,7 @@ background-color: rgba(15, 0, 0, 0.6);
 {
 &lt;div class=&quot;top&quot;&gt;
 
-|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 
 &lt;/div&gt;
 
@@ -9256,7 +8137,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="129" name="c2q2.1" tags="hall" position="1974,1023" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="113" name="c2q2.1" tags="hall" position="1974,1023" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9307,7 +8188,7 @@ position: absolute;
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -9346,7 +8227,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="130" name="c2q2.2" tags="hall" position="2215,1023" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="114" name="c2q2.2" tags="hall" position="2215,1023" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9397,7 +8278,7 @@ position: absolute;
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -9436,7 +8317,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="131" name="C2Q1" tags="hall" position="2095,1204" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="115" name="C2Q1" tags="hall" position="2095,1204" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -9540,7 +8421,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="132" name="c2q1.1" tags="hall" position="1970,1338" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="116" name="c2q1.1" tags="hall" position="1970,1338" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9591,9 +8472,10 @@ position: absolute;
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Gregarious!!!)&quot;)
 
+(set: $E to $E+5)
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -9631,7 +8513,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="133" name="c2q1.2" tags="hall" position="2252,1351" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="117" name="c2q1.2" tags="hall" position="2252,1351" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9684,7 +8566,7 @@ position: absolute;
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -9705,6 +8587,9 @@ position: absolute;
 	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
 		(set: $typewriterText to &quot; I am social person, like being around people.&quot;)(display: &quot;Typewriter&quot;)
 	
+	
+(set: $E to $E+1)
+	
 	&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
@@ -9722,7 +8607,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="134" name="c2Q2" tags="hall" position="2070,1501" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="118" name="c2Q2" tags="hall" position="2070,1501" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -9826,7 +8711,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="135" name="c2Q2.1" tags="hall" position="1933,1651" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="119" name="c2Q2.1" tags="hall" position="1931.3333333333333,1651" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9876,10 +8761,11 @@ position: absolute;
 {
 
 
+(set: $E to $E+5)
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -9917,7 +8803,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="136" name="c2Q2.2" tags="hall" position="2272,1649" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="120" name="c2Q2.2" tags="hall" position="2272,1649" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9966,11 +8852,12 @@ position: absolute;
 &lt;/style&gt;
 {
 
+(set: $E to $E+1)
 
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10008,7 +8895,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="137" name="c2Q3" tags="hall" position="2102,1799" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="121" name="c2Q3" tags="hall" position="2102,1799" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -10112,7 +8999,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="138" name="c2Q3.1" tags="hall" position="1965,1934" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="122" name="c2Q3.1" tags="hall" position="1965,1934" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10165,7 +9052,7 @@ position: absolute;
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10203,7 +9090,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="139" name="c2Q3.2" tags="hall" position="2270,1950.6666666666667" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="123" name="c2Q3.2" tags="hall" position="2268.3333333333335,1949" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10251,12 +9138,12 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Attention-seeker!!!)&quot;)
 
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10294,7 +9181,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="140" name="c2Q4" tags="hall" position="2097,2111" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="124" name="c2Q4" tags="hall" position="2097,2111" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -10398,7 +9285,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="141" name="c2Q4.1" tags="hall" position="1962,2284" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="125" name="c2Q4.1" tags="hall" position="1962,2284" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10451,7 +9338,7 @@ position: absolute;
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10489,7 +9376,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="142" name="c2Q4.2" tags="hall" position="2255,2299" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="126" name="c2Q4.2" tags="hall" position="2255,2299" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10537,12 +9424,12 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Outspoken!!!)&quot;)
 
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10580,7 +9467,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="143" name="c2Q6.1" tags="lost" position="2012,3403" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="127" name="c2Q6.1" tags="lost" position="2012,3403" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10630,10 +9517,14 @@ position: absolute;
 {
 
 
+(set: $A to $A-5)
+
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Self-Centered!!!)&quot;)
+
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10671,7 +9562,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="144" name="c2Q6.2" tags="lost" position="2162,3403" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="128" name="c2Q6.2" tags="lost" position="2162,3403" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10720,11 +9611,13 @@ position: absolute;
 &lt;/style&gt;
 {
 
+(set: $A to $A-1)
 
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Selfless!!!)&quot;)
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10762,7 +9655,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="145" name="C2Q7" tags="room" position="2089,3576" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="129" name="C2Q7" tags="room" position="2089,3576" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10815,7 +9708,7 @@ position: absolute;
 
 
 &lt;div class=&quot;top&quot;&gt;
-|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+|&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
 &lt;div class=&quot;row&quot;&gt;
@@ -10841,6 +9734,3626 @@ position: absolute;
 	
 	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
 		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;C2.END]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="130" name="c3Q1.1" tags="dorm" position="2857.333333333334,801.0000000000001" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $N to $N+5)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Bit stressed. &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q2]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="131" name="c3Q1.2" tags="dorm" position="3202.333333333333,801" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+(set: $N to $N+1)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I am okay, I guess. &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q2]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="132" name="c3Q2" tags="dorm" position="3014,1049.3333333333335" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[I know he is mean , but it’s bit harsh with anyone -&gt;c3Q2.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[Yeah, That mean Jerk, I hope he suffers -&gt;c3Q2.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Heard from another friends , Jerk Danny was in trouble yesterday&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="133" name="c3Q2.1" tags="dorm" position="2859,1221.0000000000002" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $E to $E-5)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I know he is mean , but it’s bit harsh with anyone &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q3]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="134" name="c3Q2.2" tags="dorm" position="3210.6666666666665,1221.0000000000002" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $E to $E-1)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Yeah, That mean Jerk, I hope he suffers&quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q3]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="135" name="c3Q3" tags="dorm" position="2999,1374.3333333333335" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[Yeah , I also get irritated -&gt;c3Q3.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ I think I am fine -&gt;c3Q3.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;There is lot of disturbance from another room beside yours , it’s really irritating. Are you not irritated ?&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="136" name="c3Q3.1" tags="dorm" position="2803.9999999999995,1496.0000000000002" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $N to $N-5)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; Yeah , I also get irritated &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q4]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="137" name="c3Q3.2" tags="dorm" position="3204,1494.3333333333335" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+(set: $N to $N-1)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I think I am fine &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q4]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="138" name="c3Q4" tags="dorm" position="3002.3333333333335,1692.666666666667" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[ I will organize my room now -&gt;c3Q4.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ I will do it later  -&gt;c3Q4.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Your room look messy , are you going to do it now &quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="139" name="c3Q4.1" tags="dorm" position="2797.333333333333,1894.3333333333337" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; I will organize my room now &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q5]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="140" name="c3Q4.2" tags="dorm" position="3199,1899.3333333333337" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I will do it later  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q5]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="141" name="c3Q5" tags="dorm" position="3002.333333333333,2062.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[ All things should be at place-&gt;c3Q5.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[  Daily needs these things , keep it out  -&gt;c3Q5.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-12 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Suitacases doesn’t look nice there, would you like to keep them properly? &quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="142" name="c3Q5.1" tags="dorm" position="2802.333333333333,2222.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;All things should be at place &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q6]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="143" name="c3Q5.2" tags="dorm" position="3200.6666666666665,2217.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Daily needs these things , keep it out &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q6]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="144" name="c3Q6" tags="dorm" position="3000.6666666666665,2352.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[Let’s open Magiclang -&gt;c3Q6.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[I have done enough  -&gt;c3Q6.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-12 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;do you want to Study? &quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="145" name="c3Q6.1" tags="dorm" position="2797.333333333333,2549.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Let’s open Magiclang &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;exam]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="146" name="c3Q6.2" tags="dorm" position="3205.6666666666665,2539.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I have done enough &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;exam]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="147" name="exam" tags="exam" position="3025.6666666666665,2672.666666666667" size="100,100">&lt;style&gt;
+@import url(&#39;https://fonts.googleapis.com/css2?family=Creepster&amp;family=Nosifer&amp;display=swap&#39;);
+	
+	.start{
+		
+		text-align:center;
+		font-family: &#39;Nosifer&#39;, cursive;
+		font-size: 50px;
+		}
+&lt;/style&gt;{
+
+&lt;h1 class=&quot;start&quot;&gt;(text-colour:yellow)[[Next-&gt;c3Q7]]&lt;/h1&gt; 
+}</tw-passagedata><tw-passagedata pid="148" name="c3Q7" tags="go" position="3030.6666666666665,2834.3333333333335" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[ It was good , Preparation always helps  -&gt;c3Q7.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ It was good , I don’t believe in preparation  -&gt;c3Q7.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Exam was too tough , I should have prepared .How’s was you exam?&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="149" name="c3Q7.1" tags="go" position="2827.333333333333,2966" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; It was good , Preparation always helps &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q8]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="150" name="c3Q7.2" tags="go" position="3257.666666666666,2958.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;It was good , I don’t believe in preparation&quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q8]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="151" name="c3Q8" tags="go" position="3042.333333333333,3144.3333333333335" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[Maybe it means Friendly -&gt;c3Q8.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[Maybe it means Enemy  -&gt;c3Q8.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;What did you write for ‘AMICABLY ’ word?&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="152" name="c3Q8.1" tags="go" position="2840.6666666666665,3279.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;  Maybe it means Friendly&quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q9]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="153" name="c3Q8.2" tags="go" position="3257.333333333333,3271.333333333333" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Maybe it means Enemy&quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q9]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="154" name="c3Q9" tags="go" position="3045.666666666667,3451.0000000000005" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[I easily get disturbed. -&gt;c3Q9.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ I don&#39;t get easily disturbed, but yesterday was something terribly odd. -&gt;c3Q9.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;I couldn’t concentrate because of yesterday’s incident,weren’t you?&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="155" name="c3Q9.1" tags="go" position="2814,3611.0000000000005" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I easily get disturbed.&quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q10]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="156" name="c3Q9.2" tags="go" position="3275.666666666667,3614.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I don&#39;t get easily disturbed, but yesterday was something terribly odd.&quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q10]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="157" name="c3Q10" tags="go" position="3049,3769.3333333333335" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[I have wild idea, let’s skip the lecture -&gt;c3Q10.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[Let’s go to class , follow our schedule -&gt;c3Q10.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;We been informed , Herbology teacher is going to rewise previous chapter we are planning to skip the lecture , what’s your plan ? &quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="158" name="c3Q10.1" tags="go" position="2840.6666666666665,3936" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I have wild idea, let’s skip the lecture &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q11]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="159" name="c3Q10.2" tags="go" position="3254,3932.666666666667" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Let’s go to class , follow our schedule  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c3Q11]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="160" name="c3Q11" tags="dorm" position="3065.6666666666665,4101" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[It’s my habit to keep at proper place -&gt;c3Q11.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ let it be. -&gt;c3Q11.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-12 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Hope you had good day. Would you like to keep your school bag properly or do something fun? &quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="161" name="c3Q11.1" tags="dorm" position="2903.9999999999995,4296" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;It’s my habit to keep at proper place&quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;end3]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="162" name="c3Q11.2" tags="dorm" position="3273.9999999999995,4319.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;let it be. &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;end3]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="163" name="end3" tags="info" position="3545.6666666666665,4644.333333333335" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+@import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
+@import url(&#39;https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&amp;display=swap&#39;);
+div.first {
+  background-color: rgba(15, 0, 0, 0.5);
+  height: auto;
+  border-radius: 25px;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+  font-size:30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.title{
+	font-family: &#39;Fontdiner Swanky&#39;, cursive;
+}
+&lt;/style&gt;{
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-8 first&quot;&gt;
+  (set: $trophy to ($trophy+150))
+  &lt;div class=&quot;title&quot;&gt;&lt;br&gt;||  Third Chapter Completed  ||&lt;/div&gt;
+  
+&lt;img src=&quot;images/char1.1.png&quot; class=&quot;center&quot;&gt;
+
+
+&lt;b&gt;&lt;br&gt;
+Total score : $xp  &lt;br&gt;&lt;br&gt; 
+Trophies : $trophy  &lt;br&gt;&lt;br&gt; 
+Medals : $medals &lt;/b&gt;&lt;br&gt;
+[O = $O]&lt;br&gt;
+[C = $C]&lt;br&gt;
+[E = $E]&lt;br&gt;
+[A = $A]&lt;br&gt;
+[N = $N]&lt;br&gt;
+
+
+&lt;br&gt;[(stop:)[[Next-&gt;chapter4]]]
+
+&lt;/div&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+}
+</tw-passagedata><tw-passagedata pid="164" name="chapter4" tags="" position="4403,341" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="165" name="c3Q13" tags="dorm" position="3505.6666666666665,895.9999999999998" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[I trust our school, not worried much .  -&gt;c3Q13.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ I doubt security not enough in case they attack again -&gt;c3Q13.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;I couldn’t stop thinking abt Yesterday’s incident.How are you feeling?&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="166" name="c3Q13.1" tags="dorm" position="3434.0000000000005,1057.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $N to $N-5)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I trust our school, not worried much . &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="167" name="c3Q13.2" tags="dorm" position="3659.0000000000005,1132.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $N to $N-1)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; I doubt security not enough in case they attack again &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="168" name="c3Q14" tags="dorm" position="4294,2844.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[it’s hardly take some time ,will do it  -&gt;c3Q14.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[let’s skip it  -&gt;c3Q14.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-12 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Seems you are running late for your exam , do you want skip morning activity  &quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="169" name="c3Q14.1" tags="dorm" position="4212.333333333333,3039.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; it’s hardly take some time ,will do it  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="170" name="c3Q14.2" tags="dorm" position="4367.333333333333,3029.3333333333344" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;  let’s skip it &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)
 		&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
