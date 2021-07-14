@@ -320,7 +320,7 @@ div.first {
 	
 ]
 }
-</tw-passagedata><tw-passagedata pid="5" name="hal.tracks" tags="" position="2460.333333333333,387" size="100,100">bgsound: ./sound/background.mp3
+</tw-passagedata><tw-passagedata pid="5" name="hal.tracks" tags="" position="2456.333333333333,395" size="100,100">bgsound: ./sound/background.mp3
 audio1: ./sound/audio1.mp3
 audio2: ./sound/audio2.mp3
 audio2.1: ./sound/audio2.1.mp3
@@ -349,10 +349,13 @@ c2eve2: ./sound/c2/c2eve2.mp3
 c2eve3: ./sound/c2/c2eve3.mp3
 c2eve4: ./sound/c2/c2eve4.mp3
 
+c2ron1: ./sound/c2/c2ron1.mp3
+c2ron2: ./sound/c2/c2ron2.mp3
 
 
 gu1: ./sound/c2/gu1.mp3
 
+c2head1: ./sound/c2/c2head1.mp3
 
 
 evil: ./sound/c2/evil1.mp3
@@ -360,7 +363,19 @@ evil: ./sound/c2/evil1.mp3
 
 
 c3intro: ./sound/c3/c3intro.mp3
+c3ron1: ./sound/c3/c3ron1.mp3
+c3ron2: ./sound/c3/c3ron2.mp3
+c3ron3: ./sound/c3/c3ron3.mp3
+c3ron4: ./sound/c3/c3ron4.mp3
+c3ron5: ./sound/c3/c3ron5.mp3
+c3ron6: ./sound/c3/c3ron6.mp3
+c3ron7: ./sound/c3/c3ron7.mp3
+c3ron8: ./sound/c3/c3ron8.mp3
 
+
+c3sys1: ./sound/c3/c3sys1.mp3
+c3sys2: ./sound/c3/c3sys2.mp3
+c3sys3: ./sound/c3/c3sys3.mp3
 
 c4intro: ./sound/c4/c4intro.mp3
 </tw-passagedata><tw-passagedata pid="6" name="s" tags="" position="198,618" size="100,100">Double-click this passage to edit it.
@@ -5560,6 +5575,7 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;{
 
+(track: &#39;c2head1&#39;,&#39;play&#39;)
 &lt;br&gt;
 
 &lt;div class=&quot;row&quot;&gt;&lt;div class=&quot;col-sm-6 char&quot;&gt;
@@ -5643,7 +5659,7 @@ position: absolute;
 &lt;/style&gt;
 {
 
-
+(track: &#39;c2head1&#39;,&#39;stop&#39;)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -5826,6 +5842,10 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+
+(track: &#39;c2ron2&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[I think it’s too risky, teachers would save him.  -&gt;c2Q6.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -7795,6 +7815,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron1&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[Bit stressed.  -&gt;c3Q1.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -9238,7 +9261,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="124" name="c2Q4" tags="hall" position="2097,2111" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="124" name="c2Q4" tags="hall" position="2097,2115" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -9305,6 +9328,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c2ron1&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[let’s go,I love interacting with new people.  -&gt;c2Q4.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -9390,6 +9416,8 @@ position: absolute;
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c2ron1&#39;,&#39;stop&#39;)
 
 (set: $E to $E+5)
 (set: $A to $A+5)
@@ -9489,7 +9517,7 @@ position: absolute;
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Outspoken!!!)&quot;)
 
-
+(track: &#39;c2ron1&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -9585,7 +9613,7 @@ position: absolute;
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Self-Centered!!!)&quot;)
 
-
+(track: &#39;c2ron2&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -9684,6 +9712,7 @@ position: absolute;
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Selfless!!!)&quot;)
 
+(track: &#39;c2ron2&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -9869,6 +9898,7 @@ position: absolute;
 (set: $N to $N-5)
 (set: $N to $N-5)
 
+(track: &#39;c3ron1&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -9964,6 +9994,8 @@ position: absolute;
 (set: $N to $N-1)
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Laid Back !!!)&quot;)
+
+(track: &#39;c3ron1&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10071,6 +10103,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron2&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[I know he is mean , but it’s bit harsh with anyone -&gt;c3Q2.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -10160,6 +10195,8 @@ position: absolute;
 (set: $A to $A+5)
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Kind-Hearted !!!)&quot;)
+
+(track: &#39;c3ron2&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10252,6 +10289,8 @@ position: absolute;
 (set: $A to $A+1)
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Unmerciful !!!)&quot;)
+
+(track: &#39;c3ron2&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10359,6 +10398,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron3&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[Yeah , I also get irritated -&gt;c3Q3.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -10447,6 +10489,8 @@ position: absolute;
 
 (set: $N to $N-5)
 
+
+(track: &#39;c3ron3&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10543,6 +10587,8 @@ position: absolute;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
+(track: &#39;c3ron3&#39;,&#39;stop&#39;)
+
 &lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;col-sm-6 char&quot;&gt;
 
@@ -10578,7 +10624,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="138" name="c3Q4" tags="dorm" position="3002.3333333333335,1692.666666666667" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="138" name="c3Q4" tags="dorm" position="3002.3333333333335,1688.666666666667" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -10645,6 +10691,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron4&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[ I will organize my room now -&gt;c3Q4.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -10736,6 +10785,9 @@ position: absolute;
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Organised !!!)&quot;)
 
+(track: &#39;c3ron4&#39;,&#39;stop&#39;)
+
+
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
@@ -10826,6 +10878,8 @@ position: absolute;
 (set: $C to $C-1)
 (set: $C to $C-1)
 (set: $C to $C+1)
+
+(track: &#39;c3ron4&#39;,&#39;stop&#39;)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -10934,6 +10988,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3sys1&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[ All things should be at place-&gt;c3Q5.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -11012,7 +11069,7 @@ position: absolute;
 (set: $C to $C+5)
 (set: $C to $C+5)
 
-
+(track: &#39;c3sys1&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -11103,7 +11160,7 @@ position: absolute;
 (set: $C to $C+1)
 (set: $C to $C-1)
 
-
+(track: &#39;c3sys1&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -11209,6 +11266,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3sys2&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[Let’s open Magiclang -&gt;c3Q6.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -11286,7 +11346,7 @@ position: absolute;
 {
 
 
-
+(track: &#39;c3sys2&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -11374,7 +11434,7 @@ position: absolute;
 &lt;/style&gt;
 {
 
-
+(track: &#39;c3sys2&#39;,&#39;stop&#39;)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -11493,6 +11553,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron5&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[ It was good , Preparation always helps  -&gt;c3Q7.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -11583,6 +11646,8 @@ position: absolute;
 (set: $C to $C+5)	
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Prepared !!!)&quot;)
+
+(track: &#39;c3ron5&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -11678,6 +11743,8 @@ position: absolute;
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
+
+(track: &#39;c3ron5&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;col-sm-6 char&quot;&gt;
@@ -11781,6 +11848,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron6&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[Maybe it means Friendly -&gt;c3Q8.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -11870,6 +11940,7 @@ position: absolute;
 (set: $O to $O+5)
 (set: $O to $O+5)
 
+(track: &#39;c3ron6&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -11961,6 +12032,7 @@ position: absolute;
 (set: $O to $O+1)
 (set: $O to $O+1)
 
+(track: &#39;c3ron6&#39;,&#39;stop&#39;)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -12069,6 +12141,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron7&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[I easily get disturbed. -&gt;c3Q9.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -12157,6 +12232,7 @@ position: absolute;
 
 (set: $N to $N-5)
 
+(track: &#39;c3ron7&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -12250,6 +12326,8 @@ position: absolute;
 (set: $N to $N-1)
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Tough Folk !!!)&quot;)
+
+(track: &#39;c3ron7&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -12357,6 +12435,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3ron8&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[I have wild idea, let’s skip the lecture -&gt;c3Q10.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -12445,6 +12526,7 @@ position: absolute;
 (set: $C to $C+5)
 (set: $C to $C+1)
 
+(track: &#39;c3ron8&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -12538,6 +12620,9 @@ position: absolute;
 
 (set: $C to $C+1)
 (set: $C to $C+5)
+
+
+(track: &#39;c3ron8&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -12645,6 +12730,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c3sys3&#39;,&#39;play&#39;)
+
 &lt;div class=&quot;top1&quot;&gt;
 (text-colour:yellow)[[It’s my habit to keep at proper place -&gt;c3Q11.1]]
 &lt;/div&gt;&lt;br&gt;
@@ -12723,6 +12811,7 @@ position: absolute;
 
 (set: $C to $C-5)
 
+(track: &#39;c3sys3&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -12812,6 +12901,7 @@ position: absolute;
 
 (set: $C to $C-1)
 
+(track: &#39;c3sys3&#39;,&#39;stop&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
