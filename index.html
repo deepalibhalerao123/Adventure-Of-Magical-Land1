@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play game mobile.</tw-noscript></noscript></tw-story>
-<tw-storydata name="game mobile" startnode="1" creator="Twine" creator-version="2.3.14" ifid="FB52DD61-4182-44B4-9292-A10B4631EEDC" zoom="0.6" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="game mobile" startnode="1" creator="Twine" creator-version="2.3.14" ifid="FB52DD61-4182-44B4-9292-A10B4631EEDC" zoom="0.25" format="Harlowe" format-version="3.2.2" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 tw-story {
      padding: 2% 10%; 
@@ -148,6 +148,28 @@ tw-story[tags~="exam"] {
   background-position: center;
 }
 
+
+tw-story[tags~="headroom"] {
+ background-image:url('images/headroom.jpg');
+  background-size:cover;
+  height: 100vh;
+  background-position: center;
+}
+
+tw-story[tags~="headroommap"] {
+ background-image:url('images/headroommap.png');
+  background-size:cover;
+  height: 100vh;
+  background-position: center;
+}
+
+tw-story[tags~="forest"] {
+ background-image:url('images/forest.jpg');
+  background-size:cover;
+  height: 100vh;
+  background-position: center;
+}
+
 tw-sidebar {
   position: fixed;
   top: 0;
@@ -273,7 +295,9 @@ div.first {
 (set: $typewriterText to &quot;Hello,&quot;){ (set: $typewriterPos to 1)|typewriterOutput&gt;[](live: 40ms)[(append: ?typewriterOutput)[(print: $typewriterText&#39;s $typewriterPos)] $name Welome to the Game(set: $typewriterPos to it + 1)(if: $typewriterPos is $typewriterText&#39;s length + 1)[(stop:)]]}
 &lt;h1 class=&quot;con&quot;&gt;[[Continue]]&lt;/h1&gt;&lt;/div&gt;&lt;br&gt;
 [[chapter2]]&lt;br&gt;
-[[chapter3]]
+[[chapter3]]&lt;br&gt;
+[[chapter4]]
+
   &lt;div class=&quot;col-sm-3&quot;&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -350,10 +374,9 @@ evil: ./sound/c2/evil1.mp3
 
 
 c3intro: ./sound/c3/c3intro.mp3
-c3head1: ./sound/c3/head1.mp3
-c3head2: ./sound/c3/head2.mp3
-c3head3: ./sound/c3/head3.mp3
 
+
+c4intro: ./sound/c4/c4intro.mp3
 </tw-passagedata><tw-passagedata pid="6" name="s" tags="" position="198,618" size="100,100">Double-click this passage to edit it.
 $ad</tw-passagedata><tw-passagedata pid="7" name="Continue" tags="third" position="598,653" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
@@ -634,7 +657,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="14" name="Cloth Shop" tags="shop2" position="4832,3185" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="14" name="Cloth Shop" tags="shop2" position="5652,3909" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -1327,6 +1350,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Confident !!!)&quot;)
+
 &lt;div class=&quot;top&quot;&gt;
 	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
@@ -1491,11 +1517,13 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;{
 
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Inquisitive !!!)&quot;)
+
 &lt;div class=&quot;top&quot;&gt;
 	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
 
-(set: $E to $E+4)
+(set: $A to $A+4)
 
 &lt;br&gt;
 
@@ -2118,6 +2146,7 @@ background-color: rgba(15, 0, 0, 0.6);
 
 
 (set: $E to $E-1)
+
 	&lt;div class=&quot;row&quot;&gt;
 		&lt;div class=&quot;col-sm-6 char&quot;&quot;&gt;
 			&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
@@ -2819,7 +2848,7 @@ Medals : $medals &lt;/b&gt;&lt;br&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 }
-</tw-passagedata><tw-passagedata pid="41" name="cloth1.1" tags="shop2" position="4838,3419" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+</tw-passagedata><tw-passagedata pid="41" name="cloth1.1" tags="shop2" position="5658,4143" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -2915,7 +2944,7 @@ position: relative;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="42" name="Cloth1.2" tags="shop2" position="4822,3689" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="42" name="Cloth1.2" tags="shop2" position="5642,4413" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3233,7 +3262,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="47" name="C2.3" tags="hall" position="4979,3186" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="47" name="C2.3" tags="hall" position="5799,3910" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3308,7 +3337,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="48" name="C2.4" tags="hall" position="5038,3386" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="48" name="C2.4" tags="hall" position="5858,4110" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3381,7 +3410,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="49" name="C2.5" tags="hall" position="5116,3610" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="49" name="C2.5" tags="hall" position="5936,4334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3456,7 +3485,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="50" name="C2.6" tags="hall" position="5109,3775" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="50" name="C2.6" tags="hall" position="5929,4499" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3531,7 +3560,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="51" name="C2.7" tags="hall" position="5098,3928" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="51" name="C2.7" tags="hall" position="5918,4652" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3607,7 +3636,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="52" name="C2.8" tags="hall" position="4933,3973" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="52" name="C2.8" tags="hall" position="5753,4697" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 div.first {
@@ -3697,7 +3726,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="53" name="C2.9" tags="hall" position="4867,4288" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="53" name="C2.9" tags="hall" position="5687,5012" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3770,7 +3799,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="54" name="C2.10" tags="hall" position="5081,4259" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="54" name="C2.10" tags="hall" position="5901,4983" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -3845,7 +3874,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="55" name="C2Q2" tags="hall" position="4892,4485" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="55" name="C2Q2" tags="hall" position="5712,5209" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 div.first {
@@ -3937,7 +3966,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="56" name="C2Q2.1" tags="hall" position="4841,4662" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="56" name="C2Q2.1" tags="hall" position="5661,5386" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4009,7 +4038,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="57" name="C2Q2.2" tags="hall" position="5106,4719" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="57" name="C2Q2.2" tags="hall" position="5926,5443" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4081,7 +4110,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="58" name="C2Q3" tags="hall" position="4929,4826" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="58" name="C2Q3" tags="hall" position="5749,5658" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 div.first {
@@ -4173,7 +4202,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="59" name="C2Q3.1" tags="hall" position="4780,4921" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="59" name="C2Q3.1" tags="hall" position="5600,5753" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4246,7 +4275,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="60" name="C2Q3.2" tags="hall" position="4996,5001" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="60" name="C2Q3.2" tags="hall" position="5816,5833" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4323,7 +4352,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="61" name="C2Q4" tags="hall" position="4742,5082" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="61" name="C2Q4" tags="hall" position="5451,6118" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 div.first {
@@ -4416,7 +4445,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="62" name="C2Q4.1" tags="hall" position="5450,4895" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="62" name="C2Q4.1" tags="hall" position="6270,5619" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4492,7 +4521,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="63" name="C2Q4.2" tags="hall" position="5014,5180" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="63" name="C2Q4.2" tags="hall" position="5834,6012" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4565,7 +4594,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="64" name="C2Q4.1.1" tags="hall" position="5443,5079" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="64" name="C2Q4.1.1" tags="hall" position="6263,5803" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4638,7 +4667,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="65" name="C2Q4.1.2" tags="hall" position="5442,5227" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="65" name="C2Q4.1.2" tags="hall" position="6262,5951" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4713,7 +4742,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="66" name="C2Q4.1.3" tags="hall" position="5446,5384" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="66" name="C2Q4.1.3" tags="hall" position="6266,6108" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4786,7 +4815,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="67" name="C2Q4.1.4" tags="hall" position="5446,5535" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="67" name="C2Q4.1.4" tags="hall" position="6266,6259" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -4861,7 +4890,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="68" name="C2Q4.1.5" tags="hall" position="5446,5682" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="68" name="C2Q4.1.5" tags="hall" position="5366,5994" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 div.first {
@@ -4953,7 +4982,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="69" name="C2Q5" tags="hall" position="5651,5889" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="69" name="C2Q5" tags="hall" position="5651,5997" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5030,7 +5059,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="70" name="C2Q5.1" tags="hall" position="5451,6035" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="70" name="C2Q5.1" tags="hall" position="5371,6347" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5106,7 +5135,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="71" name="C2Q5.2" tags="hall" position="5451,6238" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="71" name="C2Q5.2" tags="hall" position="5371,6550" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5181,7 +5210,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="72" name="C2Q5.3" tags="hall" position="5451,6388" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="72" name="C2Q5.3" tags="hall" position="5371,6700" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5259,7 +5288,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="73" name="C2Q5.4" tags="hall" position="5451,6538" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="73" name="C2Q5.4" tags="hall" position="5371,6850" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5337,7 +5366,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="74" name="C2Q4.2.1" tags="hall" position="5016,5383" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="74" name="C2Q4.2.1" tags="hall" position="5836,6215" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5663,7 +5692,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="78" name="C2Q6.3" tags="hall" position="5023,5949" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="78" name="C2Q6.3" tags="hall" position="4943,6261" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5841,7 +5870,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="80" name="C2Q6.5" tags="lost" position="4731,6233" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="80" name="C2Q6.5" tags="lost" position="4731,6341" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5920,7 +5949,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="81" name="C2Q6.6" tags="lost" position="4733,6378" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="81" name="C2Q6.6" tags="lost" position="4733,6486" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -5995,7 +6024,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="82" name="C2Q6.7" tags="lost" position="4733,6529" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="82" name="C2Q6.7" tags="lost" position="4733,6637" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -6072,7 +6101,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="83" name="C2Q6.8" tags="lost" position="4730,6671" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="83" name="C2Q6.8" tags="lost" position="4730,6779" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -6147,7 +6176,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="84" name="C2Q6.9" tags="lost" position="4733,6829" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="84" name="C2Q6.9" tags="lost" position="4733,6937" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -6222,7 +6251,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="85" name="C2q6" tags="lost" position="4931,6951" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="85" name="C2q6" tags="lost" position="4931,7059" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
 div.first {
@@ -6317,7 +6346,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="86" name="C2.6.1" tags="go" position="4731,7146" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="86" name="C2.6.1" tags="go" position="4731,7254" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -6397,7 +6426,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="87" name="C2.6.2" tags="lost" position="5234,7144" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="87" name="C2.6.2" tags="lost" position="5234,7252" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -6474,7 +6503,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="88" name="C2.611" tags="go" position="4731,7321" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="88" name="C2.611" tags="go" position="4731,7429" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -6547,7 +6576,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="89" name="C2.s7" tags="room" position="4935,7451" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="89" name="C2.s7" tags="room" position="4935,7559" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -6625,7 +6654,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="90" name="C2.s7.1" tags="room" position="4933,7639" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="90" name="C2.s7.1" tags="room" position="4933,7669" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -7230,7 +7259,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="98" name="C2.612" tags="lost" position="5306,7308" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="98" name="C2.612" tags="lost" position="5306,7416" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -7303,7 +7332,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="99" name="C2.613" tags="lost" position="5365,7464" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="99" name="C2.613" tags="lost" position="5365,7572" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -7376,7 +7405,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="100" name="C2.614" tags="lost" position="5415,7646" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="100" name="C2.614" tags="lost" position="5415,7754" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -7619,7 +7648,7 @@ div.first {
   &lt;/div&gt;
 &lt;/div&gt;
 }
-</tw-passagedata><tw-passagedata pid="104" name="Chapter3.1" tags="dorm" position="3007.333333333333,358.6666666666666" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+</tw-passagedata><tw-passagedata pid="104" name="Chapter3.1" tags="dorm" position="3012.333333333333,358.6666666666666" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -7780,6 +7809,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;div class=&quot;top&quot;&gt;
 (text-colour:yellow)[[I am okay, I guess. -&gt;c3Q1.2]]
 &lt;/div&gt;
+
 &lt;br&gt;
 
 
@@ -7855,7 +7885,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;{
 
 &lt;h1 class=&quot;start&quot;&gt;(text-colour:yellow)[[Run-&gt;C2Q6.4]]&lt;/h1&gt; 
-}</tw-passagedata><tw-passagedata pid="109" name="run1" tags="stairs" position="5064,6457" size="100,100">&lt;style&gt;
+}</tw-passagedata><tw-passagedata pid="109" name="run1" tags="stairs" position="4984,6769" size="100,100">&lt;style&gt;
 @import url(&#39;https://fonts.googleapis.com/css2?family=Creepster&amp;family=Nosifer&amp;display=swap&#39;);
 	
 	.start{
@@ -7928,7 +7958,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;
 {
 
-(set: $A to $A-4)
+
 
 	&lt;div class=&quot;top&quot;&gt;
 		(text-colour:yellow)[[Thinking what happened doesn’t help   -&gt;q6.1]]
@@ -8186,6 +8216,8 @@ position: absolute;
 &lt;/style&gt;
 {
 
+(set: $N to $N-5)
+(set: $N to $N-5)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -8275,6 +8307,9 @@ position: absolute;
 }
 &lt;/style&gt;
 {
+
+(set: $N to $N-1)
+(set: $N to $N-1)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -8564,6 +8599,7 @@ position: absolute;
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Gregarious!!!)&quot;)
 
+(set: $E to $E+1)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -9047,7 +9083,10 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
+(set: $E to $E+1)
+(set: $E to $E-5)
+(set: $E to $E-5)
+(set: $E to $E-5)
 
 
 
@@ -9138,6 +9177,12 @@ position: absolute;
 }
 &lt;/style&gt;
 {
+
+(set: $E to $E+5)
+(set: $E to $E-1)
+(set: $E to $E-1)
+(set: $E to $E-1)
+
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Attention-seeker!!!)&quot;)
 
 
@@ -9285,7 +9330,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="125" name="c2Q4.1" tags="hall" position="1962,2284" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="125" name="c2Q4.1" tags="hall" position="1958,2284" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9334,8 +9379,10 @@ position: absolute;
 &lt;/style&gt;
 {
 
+(set: $E to $E+5)
+(set: $A to $A+5)
 
-
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Outspoken!!!)&quot;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -9424,6 +9471,10 @@ position: absolute;
 }
 &lt;/style&gt;
 {
+
+(set: $E to $E+1)
+(set: $A to $A+1)
+
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Outspoken!!!)&quot;)
 
 
@@ -9518,6 +9569,7 @@ position: absolute;
 
 
 (set: $A to $A-5)
+(set: $A to $A-5)
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Self-Centered!!!)&quot;)
 
@@ -9611,7 +9663,12 @@ position: absolute;
 &lt;/style&gt;
 {
 
+
+
 (set: $A to $A-1)
+(set: $A to $A-1)
+
+
 
 (set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned &lt;br&gt;  (Selfless!!!)&quot;)
 
@@ -9747,7 +9804,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="130" name="c3Q1.1" tags="dorm" position="2857.333333333334,801.0000000000001" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="130" name="c3Q1.1" tags="dorm" position="2857.333333333334,809.0000000000001" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -9889,6 +9946,8 @@ position: absolute;
 
 
 (set: $N to $N+1)
+
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Laid Back !!!)&quot;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10033,7 +10092,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="133" name="c3Q2.1" tags="dorm" position="2859,1221.0000000000002" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="133" name="c3Q2.1" tags="dorm" position="2827,1173.0000000000002" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10082,8 +10141,9 @@ position: absolute;
 &lt;/style&gt;
 {
 
-(set: $E to $E-5)
+(set: $A to $A+5)
 
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Kind-Hearted !!!)&quot;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10173,8 +10233,9 @@ position: absolute;
 &lt;/style&gt;
 {
 
-(set: $E to $E-1)
+(set: $A to $A+1)
 
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Unmerciful !!!)&quot;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10653,9 +10714,11 @@ position: absolute;
 }
 &lt;/style&gt;
 {
+(set: $C to $C-5)
+(set: $C to $C-5)
+(set: $C to $C+5)
 
-
-
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Organised !!!)&quot;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -10744,8 +10807,9 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
-
+(set: $C to $C-1)
+(set: $C to $C-1)
+(set: $C to $C+1)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -10881,7 +10945,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="142" name="c3Q5.1" tags="dorm" position="2802.333333333333,2222.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="142" name="c3Q5.1" tags="dorm" position="2790.333333333333,2194.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -10929,7 +10993,8 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
+(set: $C to $C+5)
+(set: $C to $C+5)
 
 
 
@@ -10970,7 +11035,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="143" name="c3Q5.2" tags="dorm" position="3200.6666666666665,2217.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="143" name="c3Q5.2" tags="dorm" position="3212.6666666666665,2165.6666666666674" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -11018,7 +11083,9 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
+(set: $C to $C+1)
+(set: $C to $C+1)
+(set: $C to $C-1)
 
 
 
@@ -11496,8 +11563,10 @@ position: absolute;
 &lt;/style&gt;
 {
 
+(set: $C to $C+5)
+(set: $C to $C+5)	
 
-
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Prepared !!!)&quot;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -11586,8 +11655,8 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
-
+(set: $C to $C+1)
+(set: $C to $C+1)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -11782,7 +11851,8 @@ position: absolute;
 &lt;/style&gt;
 {
 
-
+(set: $O to $O+5)
+(set: $O to $O+5)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -11872,7 +11942,8 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
+(set: $O to $O+1)
+(set: $O to $O+1)
 
 
 
@@ -12019,7 +12090,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="155" name="c3Q9.1" tags="go" position="2814,3611.0000000000005" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="155" name="c3Q9.1" tags="go" position="2810,3607.0000000000005" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -12068,7 +12139,7 @@ position: absolute;
 &lt;/style&gt;
 {
 
-
+(set: $N to $N-5)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -12160,7 +12231,9 @@ position: absolute;
 {
 
 
+(set: $N to $N-1)
 
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Tough Folk !!!)&quot;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -12305,7 +12378,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="158" name="c3Q10.1" tags="go" position="2840.6666666666665,3936" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="158" name="c3Q10.1" tags="go" position="2840.6666666666665,3964" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -12353,8 +12426,8 @@ position: absolute;
 }
 &lt;/style&gt;
 {
-
-
+(set: $C to $C+5)
+(set: $C to $C+1)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -12444,9 +12517,11 @@ position: absolute;
 }
 &lt;/style&gt;
 {
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Disciplined !!!)&quot;)
 
 
-
+(set: $C to $C+1)
+(set: $C to $C+5)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -12630,7 +12705,7 @@ position: absolute;
 &lt;/style&gt;
 {
 
-
+(set: $C to $C-5)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -12719,7 +12794,7 @@ position: absolute;
 &lt;/style&gt;
 {
 
-
+(set: $C to $C-1)
 
 
 &lt;div class=&quot;top&quot;&gt;
@@ -12809,7 +12884,51 @@ Medals : $medals &lt;/b&gt;&lt;br&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 }
-</tw-passagedata><tw-passagedata pid="164" name="chapter4" tags="" position="4403,341" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="165" name="c3Q13" tags="dorm" position="3505.6666666666665,895.9999999999998" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+</tw-passagedata><tw-passagedata pid="164" name="chapter4" tags="dark" position="4370.666666666667,288" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+@import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
+@import url(&#39;https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&amp;display=swap&#39;);
+div.first {
+  background-color: rgba(15, 0, 0, 0.5);
+  height: auto;
+  border-radius: 25px;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+  font-size:30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.title{
+	font-family: &#39;Fontdiner Swanky&#39;, cursive;
+}
+&lt;/style&gt;{
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-8 first&quot;&gt;
+  
+  &lt;div class=&quot;title&quot;&gt;&lt;br&gt;[Aftermath and Redemption]&lt;/div&gt;
+  
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;center&quot;&gt;
+
+
+
+(track: &#39;c4intro&#39;,&#39;play&#39;)
+
+(set: $typewriterText to &quot;The head master sent a secret message to visit his chamber and to help to save the shire of earth leans.Be ready for the challenges.&quot;)(display: &quot;Typewriter&quot;)
+
+&lt;br&gt;(live: 7s)[(stop:)[[Next-&gt;c4.Q0]]]
+
+&lt;/div&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+}
+</tw-passagedata><tw-passagedata pid="165" name="c3Q13" tags="dorm" position="3505.6666666666665,895.9999999999998" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -13095,7 +13214,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="168" name="c3Q14" tags="dorm" position="4294,2844.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="168" name="c3Q14" tags="dorm" position="6618,4804.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 body{
 	 font-family: &#39;Bubblegum Sans&#39;, cursive;
@@ -13189,7 +13308,7 @@ background-color: rgba(15, 0, 0, 0.6);
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="169" name="c3Q14.1" tags="dorm" position="4212.333333333333,3039.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="169" name="c3Q14.1" tags="dorm" position="6536.333333333333,4999.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -13278,7 +13397,7 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata><tw-passagedata pid="170" name="c3Q14.2" tags="dorm" position="4367.333333333333,3029.3333333333344" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+]</tw-passagedata><tw-passagedata pid="170" name="c3Q14.2" tags="dorm" position="6691.333333333333,4989.333333333334" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
 &lt;style&gt;
 div.first {
   background-color: rgba(15, 0, 0, 0.6);
@@ -13367,7 +13486,2405 @@ position: absolute;
 (if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
     (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
 	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
-]</tw-passagedata></tw-storydata>
+]</tw-passagedata><tw-passagedata pid="171" name="c4.Q1" tags="headroom" position="4436.333333333334,1020.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[Yes I have an excellent idea, where to store. -&gt;c4Q1.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[I think we should handover to HeadMaster -&gt;c4Q1.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/head.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;I called you help in finding any safe location to keep it, do any of you have any idea?&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="172" name="c4Q1.1" tags="headroom" position="4298.000000000001,1210.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $O to $O+5)
+
+
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Proposer !!!)&quot;)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/head.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		[Yes I have an excellent idea, where to store.]
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q2]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		(set: $typewriterText to &quot;Ok, take this map it has the route to the shire of earthleans via Brockdale Bridge, ‘arillius’ will join you. have a look at it.  &quot;)(display: &quot;Typewriter&quot;)
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="173" name="c4Q1.2" tags="headroom" position="4626.333333333334,1209" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+(set: $O to $O+1)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/head.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		[ I think we should handover to HeadMaster]
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q2]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		(set: $typewriterText to &quot;Ok, take this map it has the route to the shire of earthleans via Brockdale Bridge, ‘arillius’ will join you. have a look at it.  &quot;)(display: &quot;Typewriter&quot;)
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="174" name="c4Q2" tags="headroommap" position="4429.666666666668,1375.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[let’s explore , it’s existing and challenging -&gt;c4Q2.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ let’s follow Existing route -&gt;c4Q2.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Guys seems multiple routes to the shire here, all seems dangerous ,should we explore new route?&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="175" name="c4Q2.1" tags="forest" position="4294.666666666668,1520.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+(set: $O to $O-5)
+(set: $O to $O+1)
+(set: $O to $O-1)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;let’s explore , it’s existing and challenging  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q3]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="176" name="c4Q2.2" tags="forest" position="4626.333333333335,1523.9999999999998" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+(set: $O to $O-1)
+(set: $O to $O+5)
+(set: $O to $O-5)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; let’s follow Existing route   &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q3]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="177" name="c4Q3" tags="forest" position="4444.666666666667,1673.9999999999998" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[Yes, it’s not good. -&gt;c4Q3.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[Don’t worry we will find our way. -&gt;c4Q3.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;No Way, Oh we lost mile away from our route.&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="178" name="c4Q3.1" tags="forest" position="4289.666666666667,1872.333333333333" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+(set: $N to $N-5)
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Yes, it’s not good.  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q8]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="179" name="c4Q3.2" tags="forest" position="4634.666666666667,1870.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+(set: $N to $N-1)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Don’t worry we will find our way. &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q8]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="180" name="c4Q4" tags="forest" position="4480.666666666667,2343.333333333333" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[I am good at grasping quickly . -&gt;c4Q4.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ I am not good at grasping quickly. -&gt;c4Q4.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/a.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Good guys you made it. lets continue Let’s look at map, who is good at grasping things.&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="181" name="c4Q4.1" tags="forest" position="4318.333333333333,2530" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $O to $O+5)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I am good at grasping quickly .  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q5]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="182" name="c4Q4.2" tags="forest" position="4668.333333333334,2526.666666666666" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $O to $O+1)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; I am not good at grasping quickly. &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q5]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="183" name="c4Q5" tags="headroom" position="4495,2715" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/head.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q6]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		(set: $typewriterText to &quot;Very well-done kids, you did it . We won our battle. &quot;)(display: &quot;Typewriter&quot;)
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="184" name="c4Q6" tags="headroom" position="4495,2959" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[Yeah, they did their job.-&gt;c4Q6.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[I feel really bad for him. -&gt;c4Q6.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;But we lost Arillius.&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="185" name="c4Q6.1" tags="headroom" position="4375,3109" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $A to $A+5)
+(set: $N to $N-1)
+(set: $N to $N+1)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Yeah, they did their job.  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q7]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="186" name="c4Q6.2" tags="headroom" position="4615,3109" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $A to $A+1)
+(set: $N to $N-5)
+(set: $N to $N+5)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;I feel really bad for him. &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q7]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="187" name="c4Q7" tags="headroom" position="4501.666666666667,3259" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+	
+	&lt;/div&gt;
+	
+	
+	
+	&lt;div class=&quot;col-sm-12 bottom&quot; text-align:center&gt;
+		(set: $typewriterText to &quot;Well done you have saved the shire of earthleans . &quot;)(display: &quot;Typewriter&quot;)
+   		&lt;br&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;end4]]]
+		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="188" name="end4" tags="info" position="4641.666666666667,3457" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+@import url(&#39;https://fonts.googleapis.com/css2?family=Bubblegum+Sans&amp;display=swap&#39;);
+@import url(&#39;https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&amp;display=swap&#39;);
+div.first {
+  background-color: rgba(15, 0, 0, 0.5);
+  height: auto;
+  border-radius: 25px;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+  font-size:30px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.title{
+	font-family: &#39;Fontdiner Swanky&#39;, cursive;
+}
+&lt;/style&gt;{
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;col-sm-8 first&quot;&gt;
+  (set: $trophy to ($trophy+150))
+  &lt;div class=&quot;title&quot;&gt;&lt;br&gt;||  The End  ||&lt;/div&gt;
+  
+&lt;img src=&quot;images/char1.1.png&quot; class=&quot;center&quot;&gt;
+
+
+&lt;b&gt;&lt;br&gt;
+Total score : $xp  &lt;br&gt;&lt;br&gt; 
+Trophies : $trophy  &lt;br&gt;&lt;br&gt; 
+Medals : $medals &lt;/b&gt;&lt;br&gt;
+[O = $O]&lt;br&gt;
+[C = $C]&lt;br&gt;
+[E = $E]&lt;br&gt;
+[A = $A]&lt;br&gt;
+[N = $N]&lt;br&gt;
+
+
+&lt;br&gt;[(stop:)[[Result-&gt;Result]]]
+
+&lt;/div&gt;
+  &lt;div class=&quot;col-sm-2&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+}
+</tw-passagedata><tw-passagedata pid="189" name="c4.Q0" tags="headroom" position="4458.666666666667,657.6666666666666" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[I can’t either as I don’t have good imagination -&gt;c4Q0.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[No, I can imagine. -&gt;c4Q0.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/head.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Guys, I can’t even imagine what his chamber looks like!&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="190" name="c4Q0.1" tags="headroom" position="4235.666666666667,807.6666666666666" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $O to $O+5)
+(set: $O to $O-1)
+
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Hyperphantasiac !!!)&quot;)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; I can’t either as I don’t have good imagination  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4.Q1]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="191" name="c4Q0.2" tags="headroom" position="4665.666666666667,807.6666666666666" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $O to $O+1)
+(set: $O to $O-5)
+
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Aphantasiac !!!)&quot;)
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot; No, I can imagine. &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4.Q1]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="192" name="c4Q8" tags="" position="4470.666666666667,2044.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+body{
+	 font-family: &#39;Bubblegum Sans&#39;, cursive;
+	 
+}
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+
+  
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+ 
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.top1{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+  text-align:center;
+
+}
+div.top1:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+   font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+&lt;div class=&quot;top1&quot;&gt;
+(text-colour:yellow)[[You should have never come with us, no one forced you  -&gt;c4Q8.1]]
+&lt;/div&gt;&lt;br&gt;
+
+&lt;div class=&quot;top&quot;&gt;
+(text-colour:yellow)[[ Yeah, I understand Someone has to face it -&gt;c4Q8.2]]
+&lt;/div&gt;
+&lt;br&gt;
+
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		
+		&lt;/div&gt;
+		
+		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
+   	(set: $typewriterText to &quot;Seems it’s more dangerous out here .we were safe in school we should have said No to Headmaster&quot;)(display: &quot;Typewriter&quot;)
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="193" name="c4Q8.1" tags="forest" position="4267.666666666667,2178.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+(set: $A to $A-5)
+(set: $A to $A+1)
+(set: $A to $A+1)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;You should have never come with us, no one forced you   &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q4]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="194" name="c4Q8.2" tags="forest" position="4705.666666666667,2194.6666666666665" size="100,100">&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x&quot; crossorigin=&quot;anonymous&quot;&gt;
+&lt;style&gt;
+div.first {
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 25px;
+}
+div.top{
+  background-color: rgba(15, 0, 0, 0.6);
+  height: auto;
+  border-radius: 10px;
+}
+div.top:hover{
+  background-color: black;
+  height: auto;
+  border-radius: 10px;
+}
+div.char{
+	height:170px;
+	position:relative;
+}
+.mychar{
+position: absolute;
+    padding: 0;
+    bottom: 0;
+    right: 0;
+}
+.harry{
+	position: absolute;
+    padding: 0;
+    bottom: 0;
+    left: 0;
+}
+.bottom{
+	background-color: rgba(15, 0, 0, 0.6);
+  height:auto;
+  border-radius: 10px;
+  padding:0 10px 0 5px;
+  text-align:center;
+  font-family: &#39;Bubblegum Sans&#39;, cursive;
+   font-size:30px;
+  
+}
+.txtbottom{
+	text-align:center;
+}
+&lt;/style&gt;
+{
+
+(set: $A to $A-1)
+(set: $A to $A+5)
+(set: $A to $A+5)
+
+(set: $medals to ($medals+1))(set: $xp to ($xp+150))(alert:&quot;Congratulations New MEDAL earned  &lt;br&gt;  (Understanding !!!)&quot;)
+
+
+&lt;div class=&quot;top&quot;&gt;
+|&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+
+	&lt;img src=&quot;images/char1.1.png&quot; class=&quot;harry&quot;&gt;
+	
+
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-6 char&quot;&gt;
+		&lt;img src=&quot;images/ron1.1.png&quot; class=&quot;mychar&quot;&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;row&quot;&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
+		(set: $typewriterText to &quot;Yeah, I understand Someone has to face it  &quot;)(display: &quot;Typewriter&quot;)
+	
+	&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
+		(live: 2s)[(stop:)(text-colour:yellow)[[Next-&gt;c4Q4]]]
+		&lt;/div&gt;
+	
+	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+		
+   		
+   
+ &lt;/div&gt;
+&lt;/div&gt;
+
+}
+(if: (track: &#39;bgsound&#39;, &#39;isplaying&#39;))[
+    (track: &#39;bgsound&#39;, &#39;volume&#39;, 0.15)
+	(track: &#39;bgsound&#39;, &#39;loop&#39;, true)
+]</tw-passagedata><tw-passagedata pid="195" name="Result" tags="" position="4825.666666666667,3619" size="100,100">{
+(set:$O to $O/40)
+(set:$C to $C/40)
+(set:$E to $E/40)
+(set:$A to $A/40)
+(set:$N to $N/40)
+
+(set:$O to $O*100)
+(set:$C to $C*100)
+(set:$E to $E*100)
+(set:$A to $A*100)
+(set:$N to $N*100)
+
+ 
+ &lt;style&gt;
+ 	table,th,td{
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+ &lt;/style&gt;
+ 
+ 
+[$name Here is your result !!!]&lt;br&gt;
+[Compare your personality traits with standard career Traits]
+
+ &lt;table style=&quot;width:100%&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Trait Name&lt;/th&gt;
+    &lt;th&gt;Your T (G)&lt;/th&gt;
+    &lt;th&gt;Your T in %(G)&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Openness&lt;/td&gt;
+    &lt;td&gt;
+		
+		(if: $O &gt;= 60)[H]
+		(else-if: $O &gt;= 30 and $O &lt; 60 )[M]
+		(else-if: $O &lt; 30)[L]
+		
+	&lt;/td&gt;
+    &lt;td&gt;$O&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Conscientiousness&lt;/td&gt;
+    &lt;td&gt;
+		
+		(if: $C &gt;= 60)[H]
+		(else-if: $C &gt;= 30 and $C &lt; 60 )[M]
+		(else-if: $C &lt; 30)[L]
+		
+	&lt;/td&gt;
+    &lt;td&gt;$C&lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Extraversion&lt;/td&gt;
+    &lt;td&gt;
+		(if: $E &gt;= 60)[H]
+		(else-if: $E &gt;= 30 and $E &lt; 60 )[M]
+		(else-if: $E &lt; 30)[L]
+		
+	&lt;/td&gt;
+    &lt;td&gt;$E&lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Agreebleness&lt;/td&gt;
+    &lt;td&gt;
+		(if: $A &gt;= 60)[H]
+		(else-if: $A &gt;= 30 and $A &lt; 60 )[M]
+		(else-if: $A &lt; 30)[L]
+		
+	&lt;/td&gt;
+    &lt;td&gt;$A&lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Neuroticism&lt;/td&gt;
+    &lt;td&gt;
+		(if: $N &gt;= 60)[H]
+		(else-if: $N &gt;= 30 and $N &lt; 60 )[M]
+		(else-if: $N &lt; 30)[L]
+		
+	&lt;/td&gt;
+    &lt;td&gt;$N&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;H : High M : Moderate L : Low&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt; 
+&lt;br&gt;
+[[Standard career Traits -&gt; sct]]
+&lt;br&gt;
+
+(link: &quot;Continue Traditional Test&quot;)[(goto-url: &quot;https://docs.google.com/forms/d/e/1FAIpQLScEEzwW3wJmMmReAwnCMaPOpcX6SJ1C-IMK26EgD3ppjmZNsA/viewform&quot;)]
+
+
+}
+
+</tw-passagedata><tw-passagedata pid="196" name=" sct" tags="" position="5157.666666666667,3649" size="100,100"> {
+ &lt;style&gt;
+ 	table,th,td{
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+
+ &lt;/style&gt;
+ 
+ 
+
+ &lt;table style=&quot;width:100%&quot;&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Trait Name&lt;/th&gt;
+    &lt;th&gt;Engineering&lt;/th&gt;
+    &lt;th&gt;Medicine&lt;/th&gt;
+	&lt;th&gt;Design&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Openness&lt;/td&gt;
+    &lt;td&gt;[H]&lt;/td&gt;
+    &lt;td&gt;[M]&lt;/td&gt;
+	&lt;td&gt;[H]&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Conscientiousness&lt;/td&gt;
+    &lt;td&gt;[H]&lt;/td&gt;
+    &lt;td&gt;[M]&lt;/td&gt;
+	&lt;td&gt;[M]&lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Extraversion&lt;/td&gt;
+    &lt;td&gt;[M]&lt;/td&gt;
+    &lt;td&gt;[M]&lt;/td&gt;
+	&lt;td&gt;[L]&lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Agreebleness&lt;/td&gt;
+    &lt;td&gt;[L]&lt;/td&gt;
+    &lt;td&gt;[L]&lt;/td&gt;
+	&lt;td&gt;[M]&lt;/td&gt;
+  &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Neuroticism&lt;/td&gt;
+    &lt;td&gt;[H]&lt;/td&gt;
+    &lt;td&gt;[M]&lt;/td&gt;
+	&lt;td&gt;[M]&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;H : High M : Moderate L : Low&lt;/th&gt;
+  &lt;/tr&gt;
+&lt;/table&gt; 
+}</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
