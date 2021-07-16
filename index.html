@@ -324,7 +324,7 @@ div.first {
 	
 ]
 }
-</tw-passagedata><tw-passagedata pid="5" name="hal.tracks" tags="" position="1056.333333333333,1319" size="100,100">bgsound: ./sound/background.mp3
+</tw-passagedata><tw-passagedata pid="5" name="hal.tracks" tags="" position="1764.333333333333,227" size="100,100">bgsound: ./sound/background.mp3
 audio1: ./sound/audio1.mp3
 audio2: ./sound/audio2.mp3
 audio2.1: ./sound/audio2.1.mp3
@@ -338,7 +338,9 @@ audio7: ./sound/audio7.mp3
 
 c1ron1: ./sound/c1ron1.mp3
 c1ron2: ./sound/c1ron2.mp3
+c1ron3: ./sound/c1ron3.mp3
 
+c1sys1: ./sound/c1sys1.mp3
 
 audio8: ./sound/audio8.mp3
 audio4.1: ./sound/audio4.1.mp3
@@ -356,6 +358,7 @@ c2eve4: ./sound/c2/c2eve4.mp3
 
 c2ron1: ./sound/c2/c2ron1.mp3
 c2ron2: ./sound/c2/c2ron2.mp3
+c2ron3: ./sound/c2/c2ron3.mp3
 
 
 gu1: ./sound/c2/gu1.mp3
@@ -368,6 +371,7 @@ evil: ./sound/c2/evil1.mp3
 
 
 c3intro: ./sound/c3/c3intro.mp3
+c3ron0: ./sound/c3/c3ron0.mp3
 c3ron1: ./sound/c3/c3ron1.mp3
 c3ron2: ./sound/c3/c3ron2.mp3
 c3ron3: ./sound/c3/c3ron3.mp3
@@ -392,6 +396,8 @@ c4ron4: ./sound/c4/c4ron4.mp3
 c4ron5: ./sound/c4/c4ron5.mp3
 
 c4head1: ./sound/c4/c4head1.mp3
+c4head2: ./sound/c4/c4head2.mp3
+c4head3: ./sound/c4/c4head3.mp3
 
 c4a1: ./sound/c4/c4a1.mp3
 
@@ -1487,7 +1493,7 @@ background-color: rgba(15, 0, 0, 0.6);
 	&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-   (set: $typewriterText to &quot;I was alone, nothing much to do.&quot;)(display: &quot;Typewriter&quot;)
+   
    
  &lt;/div&gt;
 &lt;/div&gt;
@@ -1586,7 +1592,7 @@ background-color: rgba(15, 0, 0, 0.6);
 	&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
-   		[I was alone, nothing much to do.]
+   		(set: $typewriterText to &quot;I was alone, nothing much to do.&quot;)(display: &quot;Typewriter&quot;)
  &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2032,7 +2038,7 @@ background-color: rgba(15, 0, 0, 0.6);
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt; 
 		
 		
-   		(set: $typewriterText to &quot;I am excited too. Last year nightmare, spent time reflecting what happened.&quot;)(display: &quot;Typewriter&quot;)
+   		
    
  &lt;/div&gt;
 &lt;/div&gt;
@@ -2120,8 +2126,7 @@ background-color: rgba(15, 0, 0, 0.6);
 	
 	
    
-   (set: $typewriterText to &quot;I am excited too. Last year nightmare, spent time reflecting what happened.&quot;)(display: &quot;Typewriter&quot;)
-   
+  
  &lt;/div&gt;
 &lt;/div&gt;
 }
@@ -2176,6 +2181,9 @@ background-color: rgba(15, 0, 0, 0.6);
 }
 &lt;/style&gt;
 {
+
+(track: &#39;c1ron3&#39;, &#39;play&#39;)
+
 &lt;div class=&quot;top&quot;&gt;
 
 	|&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
@@ -2194,7 +2202,8 @@ background-color: rgba(15, 0, 0, 0.6);
 
 &lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-		(set: $typewriterText to &quot;Ok Ron, bye. Will meet you at school.&quot;)(display: &quot;Typewriter&quot;)
+		
+		[Ok Ron, bye. Will meet you at school.]
 		
 	&lt;/div&gt;
 	
@@ -2203,7 +2212,7 @@ background-color: rgba(15, 0, 0, 0.6);
 	&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
-		[Mom is calling me got to go. See you at school, bye!] 
+		(set: $typewriterText to &quot;Mom is calling me got to go. See you at school, bye!&quot;)(display: &quot;Typewriter&quot;)
  &lt;/div&gt;
 &lt;/div&gt;
 }
@@ -2256,6 +2265,9 @@ background-color: rgba(15, 0, 0, 0.6);
 
 &lt;/style&gt;
 {
+
+(track: &#39;c1sys1&#39;, &#39;play&#39;)
+
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;First Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
@@ -2569,7 +2581,7 @@ background-color: rgba(15, 0, 0, 0.6);
 
 &lt;div class=&quot;row&quot;&gt;
 	&lt;div class=&quot;col-sm-5 bottom&quot;&gt;
-	
+		[Hi Eve, Nice to see, you look different did you change your Style Appearance]
 		&lt;/div&gt;
 		
 		&lt;div class=&quot;col-sm-2 txtbottom&quot;&gt;
@@ -2797,7 +2809,7 @@ position: absolute;
 {
 
 (track: &#39;c2head1&#39;,&#39;stop&#39;)
-
+(track: &#39;c2ron3&#39;,&#39;play&#39;)
 
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Second Chapter || $name Total score : $xp ||  Trophies : $throphy    || Medals : $medals &lt;/b&gt;|
@@ -3084,6 +3096,7 @@ background-color: rgba(15, 0, 0, 0.6);
 &lt;/style&gt;{
 
 (track: &#39;c3intro&#39;,&#39;stop&#39;)
+(track: &#39;c3ron0&#39;,&#39;play&#39;)
 
 
 &lt;div class=&quot;top&quot;&gt;|&lt;b&gt;Third Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
@@ -8580,6 +8593,10 @@ position: absolute;
 
 (track: &#39;c4head1&#39;,&#39;stop&#39;)
 
+
+(track: &#39;c4head2&#39;,&#39;play&#39;)
+
+
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
@@ -8675,6 +8692,11 @@ position: absolute;
 
 (track: &#39;c4head1&#39;,&#39;stop&#39;)
 
+
+
+
+
+
 &lt;div class=&quot;top&quot;&gt;
 |&lt;b&gt;Fourth Chapter || $name Total score : $xp ||  Trophies : $trophy    || Medals : $medals &lt;/b&gt;|
 &lt;/div&gt;
@@ -8704,6 +8726,9 @@ position: absolute;
 		&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+	(track: &#39;c4head2&#39;,&#39;play&#39;)
+	
+	
 		(set: $typewriterText to &quot;Ok, take this map it has the route to the shire of earthleans via Brockdale Bridge, ‘arillius’ will join you. have a look at it.  &quot;)(display: &quot;Typewriter&quot;)
    		
    
@@ -9674,6 +9699,9 @@ position: absolute;
 		&lt;/div&gt;
 	
 	&lt;div class=&quot;col-sm-5 bottom&quot; text-align:center&gt;
+	
+	(track: &#39;c4head3&#39;, &#39;play&#39;)
+	
 		(set: $typewriterText to &quot;Very well-done kids, you did it . We won our battle. &quot;)(display: &quot;Typewriter&quot;)
    		
    
@@ -10735,7 +10763,8 @@ position: absolute;
  
  
 [$name Here is your result !!!]&lt;br&gt;
-[Compare your personality traits with standard career Traits]
+[Compare your personality traits with standard career Traits]&lt;br&gt;
+For inforamation [[click here]]
 
  &lt;table style=&quot;width:100%&quot;&gt;
   &lt;tr&gt;
@@ -10861,7 +10890,7 @@ position: absolute;
   &lt;/tr&gt;
 &lt;/table&gt; 
 
-For More inforamtion [[click here]]
+
 &lt;br&gt;
 [[Back-&gt;Result]]
 
